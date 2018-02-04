@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "Angular.ng-template",
+    "EditorConfig.EditorConfig",
+    "eg2.tslint",
+    "esbenp.prettier-vscode",
+    "mrmlnc.vscode-scss"
+  ]
+}
