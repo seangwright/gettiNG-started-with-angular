@@ -44,3 +44,4 @@ Thumbs.db
 
 # build process
 src/environments/version.ts
+src/version.json
