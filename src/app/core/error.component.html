@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>
+    Unfortunately an error has occurred
+  </h2>
+  <p>
+    <ng-template [ngIf]="(errorCode | async) === 400">
+      An error has occured. Click here to <a href="#" (click)="onReloadClick($event)">reload the application.</a>
+      if this problem persists please contact support.
+    </ng-template>
+
+    <ng-template [ngIf]="(errorCode | async) === 403">
+      You are not authorized to perform this action. Please contact support.
+    </ng-template>
+  </p>
+  <p>Click here to <a [routerLink]="['/', 'help', 'support']">contact support</a></p>
+</div>

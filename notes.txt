@@ -1,44 +1,66 @@
-* develop outside backend project
-* naming conventions (tslint)
+Conventions, formatting and tooling
+  * develop outside backend project
+  * use vs code
+    * workspace settings go with the repo
+  * naming conventions (tslint)
     * singular for modules, plural when necessary for files
     * component and directive prefix of 2 or 3 characters
-* formatting
-    * prettier
-    * .editorconfig
-* use vs code
-    * workspace settings go with the repo
-        * format on save, see: prettier
+  * strict tsconfig
+  * formatting
+      * prettier
+      * .editorconfig
+      * format on save, see: prettier
     * extensions config in vscode
-* follow styleguide 
+  * commit message format (follow angular)
+  * absolute imports for refactoring
+    * group imports (library vs app)
+  * consistent component/service/directive creation
+    * see: use cli for generating files
+
+Project architecture
+  * follow styleguide
     * feature based structure
     * core module
-* lazy load everything
-    * root components for modules
-* stay flat in file structure as long as possible
+  * stay flat in file structure as long as possible
     * it's ok to move things as the app grows
-        * see: absolute imports
-* commit message format (follow angular)
-* maintain versions
+    * see: absolute imports
+  * remove floating semver in package.json
+
+  * maintain versions
     * keep single source of truth for version (package.json?)
-    * include in app
-    * app upgrade process architecture
-        * demo?
-* debug service
-    * flag to enable in production
-* type unions for common messages in notification service
-* lettable operators
-* ngUnsubscribe subject or shareReplay
-* avoid base classes / inheritance
-* helper ES modules for pure functions (stateless)
-* absolute imports for refactoring
-    * group imports (library vs app)
-* build process
+  * use cli for generating files
+    * configure cli for consistent behavior (.angular-cli.json)
+  * create README and add build / deploy / environment instructions
+  * use yarn?
+    * ng set --global packageManager=yarn (before creating new project)
+  * build process
     * npm scripts pre/post
     * build directory for file generation
     * typescript
-* use yarn?
-* remove floating semver in package.json
-* strict tsconfig
-* create README and add build / deploy / environment instructions
-* use cli for generating files
-    * configure cli for consistent behavior (.angular-cli.json)
+
+
+
+Application infrastructure
+  * lazy load everything
+    * root components for modules
+  * debug service
+    * flag to enable in production
+  * type unions for common messages in notification service
+  * lettable operators
+  * helper ES modules for pure functions (stateless)
+    * parameterize / serialize
+
+  * ngUnsubscribe subject or shareReplay
+  * avoid base classes / inheritance
+    * keep small/thin api so as not to restrict flexibility
+    * UtilityService
+      * helps prevent changes to base ctor
+
+
+  * client side app updates
+    * include in app
+    * app upgrade process architecture
+    * see: maintain versions
+      * demo?
+
+

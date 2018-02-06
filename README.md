@@ -1,6 +1,12 @@
-# GettiNGStartedWithAngular
+# GettiNG Started with Angular
+
+A repository showing best practices in starting a new Angular project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+
+## How was this repository made?
+
+`ng new gettiNG-started-with-angular -p gsa --routing --style scss`
 
 ## Development server
 

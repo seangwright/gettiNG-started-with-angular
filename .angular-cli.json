@@ -8,6 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "version.json",
         "assets",
         "favicon.ico"
       ],
@@ -55,6 +56,35 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "serve": {
+      "host": "my-app.local.seangwright.me",
+      "sslCert": "ssl/server.crt",
+      "sslKey": "ssl/server.key",
+      "ssl": true,
+      "port": 443
+    },
+    "component": {
+      "flat": true,
+      "changeDetection": "OnPush",
+      "spec": false
+    },
+    "service": {
+      "flat": true,
+      "spec": true
+    },
+    "directive": {
+      "flat": true
+    },
+    "module": {
+      "flat": false
+    },
+    "pipe": {
+      "flat": true,
+      "spec": true
+    },
+    "guard": {
+      "flat": true,
+      "spec": true
+    }
   }
 }
