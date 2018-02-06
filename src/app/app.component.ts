@@ -89,6 +89,6 @@ export class AppComponent extends BaseComponent<ComponentState>
       this.updateCheckSubscription.unsubscribe();
     }
 
-    this.setState({ updateAvailable, showUpdate: true });
+    this.setState({ updateAvailable, showUpdate: updateAvailable });
   }
 }
